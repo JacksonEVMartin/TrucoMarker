@@ -1,6 +1,7 @@
 package br.edu.utfpr.trucomarker
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,18 @@ class MainActivity : AppCompatActivity() {
       v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
       insets
     }
+
+
+    binding.btHistory.setOnClickListener {
+      val intent = Intent(this, HistoryActivity::class.java)
+      startActivity(intent)
+    }
+
+    binding.btEditTeam.setOnClickListener {
+      val intent = Intent(this, EditTeamActivity::class.java)
+      startActivity(intent)
+    }
+
 
     binding.btTeam1Add1.setOnClickListener {
       addScore(1, 1)
@@ -60,6 +73,9 @@ class MainActivity : AppCompatActivity() {
     }
     binding.btTeam2Subtract.setOnClickListener {
       subtractScore(2)
+    }
+    binding.btReset.setOnClickListener {
+      resetScoreTeams()
     }
   }
 
@@ -101,7 +117,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     if (newScore < 0) {
-      binding.tvScoreTeam1.text = "0"
+      if (team == 1) {
+        binding.tvScoreTeam1.text = "0"
+      } else {
+        binding.tvScoreTeam2.text = "0"
+      }
+
       return
     }
 

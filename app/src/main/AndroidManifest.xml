@@ -12,6 +12,12 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.TrucoMarker">
     <activity
+      android:name=".HistoryActivity"
+      android:exported="false" />
+    <activity
+      android:name=".EditTeamActivity"
+      android:exported="false" />
+    <activity
       android:name=".MainActivity"
       android:exported="true">
       <intent-filter>

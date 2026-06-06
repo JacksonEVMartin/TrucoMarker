@@ -98,13 +98,13 @@
   </LinearLayout>
 
   <LinearLayout
+    android:id="@+id/linearLayout3"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:background="@color/black"
     android:orientation="vertical"
     android:padding="16dp"
-    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -187,6 +187,39 @@
     </LinearLayout>
   </LinearLayout>
 
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="horizontal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+    <Button
+      android:id="@+id/btHistory"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Historico"
+      tools:layout_editor_absoluteX="43dp"
+      tools:layout_editor_absoluteY="583dp" />
+
+    <Button
+      android:id="@+id/btEditTeam"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Editar Times"
+      tools:layout_editor_absoluteX="273dp"
+      tools:layout_editor_absoluteY="583dp" />
+
+    <Button
+      android:id="@+id/btReset"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Resetar"
+      tools:layout_editor_absoluteX="160dp"
+      tools:layout_editor_absoluteY="637dp" />
+  </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
