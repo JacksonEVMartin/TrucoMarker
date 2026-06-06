@@ -8,8 +8,9 @@
   tools:context=".MainActivity">
 
   <LinearLayout
+    android:id="@+id/linearLayout2"
     android:layout_width="0dp"
-    android:layout_height="282dp"
+    android:layout_height="wrap_content"
     android:layout_margin="16dp"
     android:background="@color/black"
     android:orientation="vertical"
@@ -52,6 +53,7 @@
         android:id="@+id/btTeam1Add3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
         android:text="+3"
         app:iconPadding="18dp" />
 
@@ -81,11 +83,110 @@
         android:id="@+id/btTeam1Add12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
         android:text="+12"
+        app:iconPadding="18dp" />
+
+      <Button
+        android:id="@+id/btTeam1Subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
         app:iconPadding="18dp" />
 
     </LinearLayout>
   </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+    <TextView
+      android:id="@+id/tvNameTeam2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="16dp"
+      android:text="Team 2"
+      android:textAlignment="center" />
+
+    <TextView
+      android:id="@+id/tvScoreTeam2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingVertical="16dp"
+      android:text="0"
+      android:textAlignment="center"
+      android:textSize="50dp" />
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btTeam2Add1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:iconPadding="18dp" />
+
+      <Button
+        android:id="@+id/btTeam2Add3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="+3"
+        app:iconPadding="18dp" />
+
+      <Button
+        android:id="@+id/btTeam2Add6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+6"
+        app:iconPadding="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/btTeam2Add9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+9"
+        app:iconPadding="18dp" />
+
+      <Button
+        android:id="@+id/btTeam2Add12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:text="+12"
+        app:iconPadding="18dp" />
+
+      <Button
+        android:id="@+id/btTeam2Subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        app:iconPadding="18dp" />
+
+    </LinearLayout>
+  </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
