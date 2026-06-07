@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import br.edu.utfpr.trucomarker.databinding.ActivityMainBinding
+import br.edu.utfpr.trucomarker.datas.TeamData
 
 class MainActivity : AppCompatActivity() {
   private lateinit var binding: ActivityMainBinding
@@ -23,7 +24,6 @@ class MainActivity : AppCompatActivity() {
       v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
       insets
     }
-
 
     binding.btHistory.setOnClickListener {
       val intent = Intent(this, HistoryActivity::class.java)
@@ -77,6 +77,13 @@ class MainActivity : AppCompatActivity() {
     binding.btReset.setOnClickListener {
       resetScoreTeams()
     }
+  }
+
+  override fun onResume() {
+    super.onResume()
+
+    binding.tvNameTeam1.text = TeamData.team1Name
+    binding.tvNameTeam2.text = TeamData.team2Name
   }
 
   private fun addScore(team: Int, scoreAdd: Int) {
