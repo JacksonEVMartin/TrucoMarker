@@ -5,13 +5,88 @@
   android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:layout_margin="16dp"
   tools:context=".HistoryActivity">
 
   <TextView
-    android:id="@+id/textView"
+    android:id="@+id/tvHistory"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Historico"
-    tools:layout_editor_absoluteX="180dp"
-    tools:layout_editor_absoluteY="280dp" />
+    android:text="Histórico das partidas"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    app:layout_constraintEnd_toStartOf="@id/linearLayout2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tvHistory">
+
+    <TextView
+      android:id="@+id/tvNameTeam1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Time 1"
+      android:textAlignment="center" />
+
+    <TextView
+      android:id="@+id/tvWinTeam1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="0"
+      android:textAlignment="center"
+      android:textSize="50dp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/linearLayout"
+    app:layout_constraintTop_toBottomOf="@+id/tvHistory">
+
+    <TextView
+      android:id="@+id/tvNameTeam2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Time 2"
+      android:textAlignment="center" />
+
+    <TextView
+      android:id="@+id/tvWinTeam2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="0"
+      android:textAlignment="center"
+      android:textSize="50dp" />
+
+  </LinearLayout>
+
+  <Button
+    android:id="@+id/btResetHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Reiniciar Histórico"
+    app:layout_constraintBottom_toTopOf="@+id/btBack" />
+
+  <Button
+    android:id="@+id/btBack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:text="Voltar"
+    app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

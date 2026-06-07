@@ -200,7 +200,7 @@
       android:id="@+id/btHistory"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Historico"
+      android:text="Histórico"
       tools:layout_editor_absoluteX="43dp"
       tools:layout_editor_absoluteY="583dp" />
 
@@ -213,10 +213,10 @@
       tools:layout_editor_absoluteY="583dp" />
 
     <Button
-      android:id="@+id/btReset"
+      android:id="@+id/btResetScore"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Resetar"
+      android:text="Reiniciar Pontuação"
       tools:layout_editor_absoluteX="160dp"
       tools:layout_editor_absoluteY="637dp" />
   </LinearLayout>

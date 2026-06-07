@@ -3,6 +3,7 @@ package br.edu.utfpr.trucomarker
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -74,8 +75,8 @@ class MainActivity : AppCompatActivity() {
     binding.btTeam2Subtract.setOnClickListener {
       subtractScore(2)
     }
-    binding.btReset.setOnClickListener {
-      resetScoreTeams()
+    binding.btResetScore.setOnClickListener {
+      resetScoreTeams(true)
     }
   }
 
@@ -105,6 +106,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     if (newScore >= 12) {
+      if (team == 1) {
+        TeamData.team1Wins++
+      } else {
+        TeamData.team2Wins++
+      }
       alertVictory(
         winner,
         loser,
@@ -141,10 +147,17 @@ class MainActivity : AppCompatActivity() {
 
   }
 
-  private fun resetScoreTeams() {
-    // adicionar logica para salvar historico
+  private fun resetScoreTeams(isToast: Boolean = false) {
     binding.tvScoreTeam1.text = "0"
     binding.tvScoreTeam2.text = "0"
+
+    if (isToast) {
+      Toast.makeText(
+        this,
+        "Placar reiniciado com sucesso",
+        Toast.LENGTH_SHORT
+      ).show()
+    }
   }
 
   private fun alertVictory(winningTeam: String, losingTeam: String) {
