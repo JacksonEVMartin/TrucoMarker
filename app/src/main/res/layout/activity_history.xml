@@ -5,7 +5,8 @@
   android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:layout_margin="16dp"
+  android:background="@color/gray"
+  android:padding="16dp"
   tools:context=".HistoryActivity">
 
   <TextView
@@ -13,6 +14,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Histórico das partidas"
+    android:textColor="@color/white"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +24,7 @@
     android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
-    android:background="@color/black"
+    android:background="@color/darkBlue"
     android:orientation="vertical"
     android:paddingTop="16dp"
     app:layout_constraintEnd_toStartOf="@id/linearLayout2"
@@ -34,7 +36,8 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="Time 1"
-      android:textAlignment="center" />
+      android:textAlignment="center"
+      android:textColor="@color/white" />
 
     <TextView
       android:id="@+id/tvWinTeam1"
@@ -42,6 +45,7 @@
       android:layout_height="wrap_content"
       android:text="0"
       android:textAlignment="center"
+      android:textColor="@color/white"
       android:textSize="50dp" />
 
   </LinearLayout>
@@ -51,7 +55,7 @@
     android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
-    android:background="@color/black"
+    android:background="@color/darkBlue"
     android:orientation="vertical"
     android:paddingTop="16dp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +67,8 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="Time 2"
-      android:textAlignment="center" />
+      android:textAlignment="center"
+      android:textColor="@color/white" />
 
     <TextView
       android:id="@+id/tvWinTeam2"
@@ -71,6 +76,7 @@
       android:layout_height="wrap_content"
       android:text="0"
       android:textAlignment="center"
+      android:textColor="@color/white"
       android:textSize="50dp" />
 
   </LinearLayout>
@@ -79,7 +85,9 @@
     android:id="@+id/btResetHistory"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/blueSecondary"
     android:text="Reiniciar Histórico"
+    android:textColor="@color/white"
     app:layout_constraintBottom_toTopOf="@+id/btBack" />
 
   <Button
@@ -87,6 +95,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
+    android:backgroundTint="@color/blueSecondary"
     android:text="Voltar"
+    android:textColor="@color/white"
     app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
